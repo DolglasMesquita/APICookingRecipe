@@ -1,9 +1,11 @@
 from flask import Flask, request
 from resources.recipes import recipes
+from flask_cors import CORS
 import random
 
 
 app = Flask(__name__)
+CORS(app)
 
 def findRecipe(id):  # HELPER BUSCA
     for recipe in recipes:
